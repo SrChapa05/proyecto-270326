@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" id="login-screen">
+        <h1>Tengo algo para ti</h1>
+        <p>Para entrar, escribe nuestra fecha especial o tu apodo:</p>
+        <input type="password" id="password" placeholder="Escribe aquí el secreto...">
+        <br>
+        <button onclick="checkPassword()">Descubrir</button>
+        <p id="error-msg" style="display:none; color: #ff69b4; margin-top: 10px;">Esa no es la respuesta correcta... 🥺</p>
+    </div>
+
+    <div class="container main-content-box" id="main-content" style="display: none;">
+        <div class="heart-icon">💜</div>
+        <h1>¡Hola, mi vida!</h1>
+        
+        <div class="tabs-menu">
+            <button class="tab-btn active" onclick="openTab(event, 'poemas')">Poemas</button>
+            <button class="tab-btn" onclick="openTab(event, 'cartas')">Cartas</button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div id="poemas" class="tab-content" style="display: block;">
+            <h2>Versos para ti</h2>
+            <p class="section-subtitle">Un pedazo de mi alma en cada línea...</p>
+            
+            <div class="poem-cards-container">
+                
+                <div class="poem-card-large">
+                    <h3 class="poem-title">Me encantas</h3>
+                    
+                    <div class="stanza">
+                        Me encantas.<br>
+                        Eres Perfecta ante mis ojos<br>
+                        Cada vez que te<br>
+                        miro directo a ellos, quedo con cara de baboso<br>
+                        Me Fascinas. De<br>
+                        ti cada día más me enamoro<br>
+                        Por ti<br>
+                        soportaría toda una vida de mordidas en los hombros
+                    </div>
+                </div>
+
+                <div class="poem-card-large">
+                    <h3 class="poem-title">Me Cambiaste el mundo</h3>
+                    
+                    <p style="font-size: 0.95rem; opacity: 0.8; margin-bottom: 25px; color: #ff69b4;">
+                        <em>Para Jarimid: la persona que convirtió lo cotidiano en algo extraordinario</em>
+                    </p>
+                    
+                    <div class="stanza">
+                        La música me distrae<br>
+                        El silencio me hace pensar<br>
+                        La mejor música es escucharte<br>
+                        El mejor silencio es mirarte.
+                    </div>
+                    
+                    <div class="stanza">
+                        Como una hoja en otoño<br>
+                        Caigo al suelo<br>
+                        Y como la misma hoja en primavera<br>
+                        Reaparezco gracias a tu consuelo.
+                    </div>
+                    
+                    <div class="stanza">
+                        Sin decir ninguna palabra<br>
+                        Sabes que es lo que pienso<br>
+                        Eso para mi<br>
+                        Tiene un valor inmenso.
+                    </div>
+                    
+                    <div class="stanza">
+                        No hay reloj capaz de contar,<br>
+                        De contar las horas que quiero pasar<br>
+                        en tu acurruco matutino<br>
+                        Y en tus abrazos en el ocaso.
+                    </div>
+                    
+                    <div class="stanza">
+                        Las perlas en el mar<br>
+                        Quisieran brillar como tus ojos,<br>
+                        Llévenme a un manicomio<br>
+                        Que de verdad me estoy volviendo loco<br>
+                        Veo la luz que lleva lo normal a lo<br>
+                        irónico<br>
+                        Lo cotidiano a ser romántico<br>
+                        Quien diría que una persona provocó<br>
+                        Que solo esa persona que me alocó<br>
+                        Me volvería el mundo tan extraño.
+                    </div>
+                </div>
+
+                <div class="poem-card-large">
+                    <h3 class="poem-title">Un sentimiento infinito</h3>
+                    
+                    <div class="stanza">
+                        Últimamente no se si estoy vivo<br>
+                        Al menos sé que muerto no estoy<br>
+                        Como una luz con sigilo<br>
+                        Que me sigue a donde voy.
+                    </div>
+                    
+                    <div class="stanza">
+                        Llego a mi vida siendo resplandeciente<br>
+                        Volviéndome todo tan diferente<br>
+                        Y no es solo últimamente<br>
+                        Pero que mas hago si solo pienso en verte.
+                    </div>
+                    
+                    <div class="stanza">
+                        Como cual terremoto mueves mi suelo<br>
+                        Como cual tsunami me inundas de sentimientos<br>
+                        Como tornado revuelves mi mente<br>
+                        Quien diría que con desastres<br>
+                        Mi mente explicaría lo que siente.
+                    </div>
+                    
+                    <div class="stanza">
+                        Como el fuego consume el combustible<br>
+                        Tu as consumido mis ganas de morirme<br>
+                        Y de una forma infalible<br>
+                        Contigo soy feliz al reírme.
+                    </div>
+                    
+                    <div class="stanza">
+                        Quizás no soy el hombre perfecto<br>
+                        Ni menos la mejor persona en su defecto<br>
+                        Por ti entraría a un duelo a muerte<br>
+                        Todo con tal de poder verte.
+                    </div>
+                    
+                    <div class="stanza">
+                        Mas muerte seria dejar de tenerte<br>
+                        Solo se que estoy vivo porque puedo ver ese brillo<br>
+                        Ese brillo que ilumina mi camino<br>
+                        Y sé que es inaudito,
+                    </div>
+                    
+                    <div class="stanza">
+                        Pero se que mi amor ti es infinito.
+                    </div>
+                </div>
+
+                <div class="poem-card-large">
+                    <h3 class="poem-title">Reconstruido</h3>
+                    
+                    <div class="stanza">
+                        A tu lado he aprendido a vivir<br>
+                        Contigo vivido aprendiendo<br>
+                        Gracias a ti e vuelto a ser niño<br>
+                        Con hambre de conocimiento
+                    </div>
+                    
+                    <div class="stanza">
+                        Antes de ti estaba encerrado<br>
+                        Encerrado en una jaula totalmente desanimado<br>
+                        Si no hubieras llegado<br>
+                        Eso me hubiera aniquilado
+                    </div>
+                    
+                    <div class="stanza">
+                        Agradezco al universo<br>
+                        Agradezco a las decisiones<br>
+                        Agradezco ese momento<br>
+                        Agradezco que me sacaras de ese agujero
+                    </div>
+                    
+                    <div class="stanza">
+                        Me soportas<br>
+                        Me aportas<br>
+                        En las victorias y derrotas<br>
+                        hiciste que aquella alma rota<br>
+                        se reconstruyera<br>
+                        y me volviera una persona nueva
+                    </div>
+                </div>
+
+                <div class="poem-card-large">
+                    <h3 class="poem-title">Amor y Odio</h3>
+                    
+                    <div class="stanza">
+                        Odio la distancia<br>
+                        Odio estar lejos<br>
+                        Odio no verte<br>
+                        Odio no ser fuerte<br>
+                        Odio estar ausente<br>
+                        Odio, odio, odio
+                    </div>
+                    
+                    <div class="stanza">
+                        Nose si me estoy volviendo loco<br>
+                        Pero me haces sentir algo tan exótico<br>
+                        Que haces desaparecer el odio<br>
+                        Y si suena cómico<br>
+                        Pero el amor va de la mano del odio<br>
+                        Pero a su vez el amor lo desaparece<br>
+                        Aun así, lejos de ti reaparece
+                    </div>
+                    
+                    <div class="stanza">
+                        Después lo entiendo<br>
+                        De apoco he ido viendo<br>
+                        Que ahora estoy conociendo<br>
+                        Que el amor y el odio es algo incierto
+                    </div>
+                    
+                    <div class="stanza">
+                        Amo estar a tu lado<br>
+                        Amo tenerte cerca<br>
+                        Amo verte<br>
+                        Amo intentar ser fuerte<br>
+                        Amo estar presente<br>
+                        Amo, amo, amo
+                    </div>
+                    
+                    <div class="stanza">
+                        Como el ying y el yang<br>
+                        Son lo contrario<br>
+                        Pero dentro de uno está el otro<br>
+                        Y al complementarlos<br>
+                        Hacen que te siga amando.
+                    </div>
+                </div>
+
+                <div class="poem-card-large">
+                    <h3 class="poem-title">Canciones</h3>
+                    
+                    <div class="stanza">
+                        No paro de escribir<br>
+                        Mis sentimientos fluyen<br>
+                        Eres mi inspiración<br>
+                        Serias una nueva canción
+                    </div>
+                    
+                    <div class="stanza">
+                        Desearía tener “tus ojos”<br>
+                        Tan hermosos<br>
+                        Para poder verte sin que sea “ilegal”<br>
+                        Cada vez que siento “algo raro”<br>
+                        Solo pienso en estar a tu lado<br>
+                        Asique por favor “Ven aquí”<br>
+                        Porque “la plena” siento un vacío<br>
+                        Cuando estoy “sin ti”
+                    </div>
+                    
+                    <div class="stanza">
+                        Yo sé que “es poco”<br>
+                        Pero por ti estoy loco,<br>
+                        “Bloqueame” esas “vibras” negativas de la sociedad<br>
+                        Me conquistaste como hechizo de “gitana”<br>
+                        Porque sin tu amor soy un “bastardo”<br>
+                        Ya no se ni que hablo de lo loco que me estoy volviendo<br>
+                        solo mejor queda decir…<br>
+                        “hablamos mañana”.
+                    </div>
+
+                    <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid rgba(57, 255, 20, 0.3); font-size: 0.85rem; color: #ccc; text-align: left; line-height: 1.5; font-style: normal;">
+                        <span style="color: #39ff14;">* Todo lo que está entre comillas son títulos de canciones:</span><br>
+                        - Tus ojos (Los Cafres)<br>
+                        - Ilegal (Cultura Profética)<br>
+                        - Algo raro (Andrey Serrano)<br>
+                        - Ven Aquí (Los Bunkers)<br>
+                        - La plena (W sound 5 - beele - ovy on the drums)<br>
+                        - Sin ti (Rawayana)<br>
+                        <em>Y todo el tercer párrafo es solo de Pablo Chill-E.</em>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="cartas" class="tab-content">
+            <h2>Lo que siento</h2>
+            <div class="letter-cards-container">
+                <div class="letter-card-large">
+                    <h3 class="letter-title">Mil palabras de una mente enamorada</h3>
+                    <p class="letter-date">11 de Junio, 2026</p>
+                    
+                    <div class="letter-body">
+                        <p>Hola, mi amor, espero que estés bien en el momento que estés leyendo esta carta. Como ya es habitual que lo diga, normalmente me cuesta comunicarme y cuando lo hago siempre son las mismas palabras o divago muchísimo, pero estas pequeñas cartas son escritas letra por letra y, si bien no son hechas con lápiz y papel, llevan el mismo amor y cariño como si lo fueran.</p>
+                        
+                        <p>La verdad no escribo esta carta con un motivo específico, ni por una ocasión especial, pero últimamente han pasado muchas cosas que, no sé si para ti, pero para mí siento que han reforzado la relación y han hecho que confiemos mucho más en el otro para contarnos cosas. La verdad, eso ha hecho que me enamore cada vez más de ti con cada segundo que pasa.</p>
+                        
+                        <p>Quizás en este último tiempo sí ha sido un poco difícil, pero siento que esa dificultad que hemos atravesado nos ha hecho más cercanos y que podamos conocer de una forma más profunda el uno al otro. Aún tengo en mente lo de anoche, que me dijeras que soy capaz de hacer tonteras solo por estar aburrido es algo muy propio de mí y que no muchas personas conocen.</p>
+                        
+                        <p>Bueno, la verdad no quiero ser tan cursi, pero no hay otra forma de escribir ni de explicar tantas cosas que siento por ti. Por cada segundo del día pienso en ti, a veces entro en modo de delay solo por el hecho de que estoy pensando en tus ojitos; en cómo brillan cuando sonríes, además de siempre repetir en mi mente momentos juntos, como la tarde del martes; que se supondría dormiríamos, pero de alguna forma esa rara conexión entre nosotros nos llevó a reírnos por cada cosa de las cuales nunca pensé reírme y mucho menos de esa manera. El ver y sentir tu tranquilidad de tener la confianza para abrazarme e intentar dormir (y sí digo intentar porque el motor de tu nariz no te dejaba jajajaja), pero bueno, esa confianza de estar a solas y quedar prácticamente indefensa y confiar en mí es algo que de verdad valoro mucho. Y para rematar la noche, esa llamada, ese momento que a pesar de la distancia terminamos riéndonos tanto que ambos prácticamente lloramos solo de tanto reírnos.</p>
+                        
+                        <p>Aparte de todo, también soy una persona agradecida, y sé que a lo mejor lo repito mucho pero de verdad te agradezco el esfuerzo, la paciencia, el cariño, las risas, la sinceridad, la comprensión, y sobre todo EL AMOR Y LA AMISTAD que tú me has entregado en este poco más de 2 meses de pololeo y casi 4 meses "juntos". Sí, de verdad lo agradezco con mucha sinceridad, ya que has sabido y te has esforzado por conocerme a pesar de todos mis defectos, los cuales sé que pueden llegar a ser muy desagradables, ya que tengo muchos. Pero a la vez, a tu lado he ido intentando mejorarlos para poder ser un hombre digno de ti y de tu amor. Aunque no sé si algún día pueda lograrlo, nunca dejaré de esforzarme por ti y por esta relación que de verdad ha sido una de las mejores cosas que me han podido pasar.</p>
+                        
+                        <p>Y la verdad no sé cómo pudiste fijarte en mí. Esa pregunta siempre está en mi mente; cada vez que me quedo mirándote cuando me estás contando algo me hace pensar en eso, porque de verdad ni mi mente ni mi corazón han podido encontrar la respuesta al cómo tú; una mujer hermosa, responsable, amable, tierna, inteligente, esforzada, empática, leal, auténtica, resiliente, determinada, valiente, apasionada, afable y compasiva... y todo eso se queda corto la verdad, pero no conozco más palabras jajaja. Cada cosa nueva que conozco de ti me sorprende y me encanta. La distancia máxima descubierta en el mundo se queda corta en comparación a lo mucho que te estoy amando. Todo lo que hemos pasado, que quizás para ti puede que sea poco e incluso algo insignificante, para mí han sido cosas que de a poco me hicieron y me están haciendo darme cuenta que contigo lo quiero todo. Quizás el tiempo pueda llegar a tener otros planes, pero por el momento todo mi ser, desde la uña de los pies al pelo más largo de mi cabeza, solo quiere ser tu sí a todo y hasta donde tú quieras. Creo que eso suena un poco enredado pero es como mi mente lo representa: de verdad solo pienso en tener todo lo que más pueda contigo hasta que el tiempo y Dios me lo permitan, y hacerte lo más fácil mientras pueda.</p>
+                        
+                        <p>Por último, me gustaría disculparme porque sé que soy alguien que comete errores y que a lo mejor por ahora no sea lo suficientemente persona para ti, ya que tengo defectos e inseguridades que aún a veces me juegan en contra y que me hacen hacer o decir cosas que no debería, como ponerme celoso por cosas tan estúpidas o el achacarme por distintos motivos. Pero te juro que no es por ti, son solo cosas mías que a veces me hacen sobrepensar y por eso de todas formas soy humano y probablemente seguiré cometiendo errores de los cuales quiero e intento aprender para no volver a cometerlos.</p>
+                        
+                        <p>Nuevamente quiero decirte que te amo mucho, que eres una mujer maravillosa por la cual nunca me arrepentiré de entregar todo mi esfuerzo porque vales la pena completamente. Cada característica de ti me encanta y me vuelve loco, desde tu manera de ver el mundo, hasta tu forma de caminar, y obvio que te amaré con todos tus defectos y cualidades, porque así decidí hacerlo. Y si eres humana, tienes defectos, pero esos defectos me enamoran de la misma forma que cualquier otra característica de ti, porque amo que seas humana, la humana, el ser, y la mujer que mi mente y mi corazón se pusieron de acuerdo y decidieron amarte.</p>
+                        
+                        <p>Perdón por hacerte leer tanto... ❤️</p>
+                        
+                        <p class="letter-signature">Tu enamorado</p>
+                    </div>
+                </div>
+                <div class="letter-card-large">
+                    <h3 class="letter-title">Desde Parral: reflexiones y promesas</h3>
+                    <p class="letter-date">11 de Junio, 2026</p>
+                    
+                    <div class="letter-body">
+                        <p>Hola, mi amor. Wao, sí que es novedad, otra carta. La verdad, esta la escribo desde Parral; es la primera que te escribo desde acá. No sé ni cómo empezar, no te mentiré: últimamente ha sido raro. Sé que es algo que pasará dentro de un tiempo, pero aun así ha sido complicado por muchas razones. Pero eso me ha hecho darme cuenta de que te amo demasiado; te amo tanto que no dejo de pensarte y siempre tengo ese sentimiento de que todo saldrá bien, no importa el problema que pueda haber.</p>
+                        
+                        <p>La verdad, con todo esto me doy cuenta de lo que estoy perdiendo en mi vida; no hablo de nuestra relación, hablo de los viajes. Siento que estar tan comprometido en eso me está quitando mi vida, mi juventud y mi tiempo. Hablando contigo, me di cuenta de tantas cosas que quiero hacer y no puedo. Siento que me está acomplejando tanto mi vida social por lo mismo; yo no debería estar todo el domingo encerrado en un estadio, no debería estar preocupado todo el sábado por el partido del día siguiente. Yo debería estar disfrutando, saliendo con mis amigos, divirtiéndome y pasando tiempo contigo. Suena exagerado, pero siento que me he perdido mucho de esta vida por eso.</p>
+                        
+                        <p>Bueno, ya es lunes incluso. Acabo de irte a dejar a la micro, hablamos con tu mami y nos reímos. Hoy noté que no andabas de ánimos, y aun así quisiste que te fuera a dejar. La verdad, eso lo valoro demasiado, porque sé que querías irte del frío y ni siquiera querías pasar donde tu mami, aparte de los informes que tenías que hacer. Pero aun así decidiste cagarte de frío caminando a mi lado y conversando. Quizás para otras personas eso no sea nada, pero para mí es valiosísimo, porque sé lo mucho que te cuesta luchar con tus propios pensamientos, y aun así cada día eliges seguir conmigo. Si yo estuviera en tu situación y conociendo cómo soy yo, sé que hace rato me hubieras mandado a la chucha, jajaja. Gracias por esos sacrificios.</p>
+                        
+                        <p>Otra situación es que no me he sentido bien mentalmente y termino desahogándome contigo. Siento que es injusto, ya que tú también tienes tus problemas. A veces me da miedo que pienses que lo hago para manipularte o para que no me termines (porque a mí me lo hicieron alguna vez y tengo miedo de que pienses lo mismo). Porfi, no sientas lástima por mí; solo es que a veces no doy más y siento que eres la única con quien puedo conversar.</p>
+                        
+                        <p>Ahora, algo más romántico:</p>
+                        
+                        <div style="margin: 30px 0; padding: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; font-style: italic; color: #fff;">
+                            <h4 style="text-align: center; color: var(--secondary-pink);">Me Cambiaste el mundo</h4>
+                            <p style="text-align: center; font-size: 0.9rem; opacity: 0.7;">Para Jarimid: la persona que convirtió lo cotidiano en algo extraordinario</p>
+                            <br>
+                            La música me distrae<br>
+                            El silencio me hace pensar<br>
+                            La mejor música es escucharte<br>
+                            El mejor silencio es mirarte.<br><br>
+                            Como una hoja en otoño / Caigo al suelo<br>
+                            Y como la misma hoja en primavera / Reaparezco gracias a tu consuelo.<br><br>
+                            Sin decir ninguna palabra / Sabes qué es lo que pienso<br>
+                            Eso para mí / Tiene un valor inmenso.<br><br>
+                            No hay reloj capaz de contar / las horas que quiero pasar<br>
+                            en tu acurruco matutino / Y en tus abrazos en el ocaso.<br><br>
+                            Las perlas en el mar / Quisieran brillar como tus ojos,<br>
+                            Llévenme a un manicomio / Que de verdad me estoy volviendo loco.<br>
+                            Veo la luz que lleva lo normal a lo irónico,<br>
+                            Lo cotidiano a ser romántico.<br>
+                            Quién diría que una persona provocó<br>
+                            Que solo esa persona que me alocó<br>
+                            Me volviera el mundo tan extraño.
+                        </div>
+                        
+                        <p>En ese breve poema solo buscaba expresar cómo me has ayudado últimamente, esa rara y loca conexión que hemos construido y cómo cambiaste mi manera de ver el mundo. Gracias por elegirme cada día y por amarme de esa manera tan hermosa. Eres mi polola, mi amiga, mi compañera y confidente. Eres un ángel caído del cielo.</p>
+                        
+                        <p class="letter-signature">Te ama, tu teita. ❤️</p>
+                    </div>
+                </div>
+                <div class="letter-card-large">
+                    <h3 class="letter-title">Pequeñas revelaciones</h3>
+                    <p class="letter-date">11 de Junio, 2026</p>
+                    
+                    <div class="letter-body">
+                        <p>Holi. La verdad, esto no tiene sentido que lo esté escribiendo de esta manera, solo es algo pequeño en lo que estaba pensando mientras estaba algo disociado y me dio por escribirlo. Bueno, dicen que los miedos son para ser superados, pero de verdad me asusta lo fácil que fue tomarte cariño, como si mi corazón y mi mente hubieran buscado a alguien como tú toda mi vida.</p>
+                        
+                        <p>Sin saberlo, cuando nos conocimos terminaste siendo mi lugar seguro. No necesitaste promesas ni palabras, solo hechos; actos que hicieron que entraras en mi burbuja como si fuera tu propia casa. La verdad, cuando me enamoré, solo bastó la manera en como me miraste y, sin decir una sola palabra, me sentí tan cómodo como un rey en su trono. Y hoy, en estos momentos, la forma en que te haces espacio para mí, incluso teniendo cosas importantes o estando en tus días malos, me hizo entender el sentimiento del verdadero AMOR.</p>
+                        
+                        <p>Hace menos de 5 minutos, mientras escribía esto, entendí que AMAR también es aprender los miedos del otro y aun así elegirlo; y a su vez, superar los miedos propios y vivir con ellos, ya que nunca dejarán de aparecer nuevos. Entendí que amar es abrazar fuerte cuando el mundo se vuelve insoportable.</p>
+                        
+                        <p>La verdad TE AMO de tantas formas: te amo en lo simple, en aquellos mensajes cortos diciendo solo “Holi”, en aquellos “avísame cuando llegues”, y en las madrugadas cuando nos desvelamos hablando de cualquier cosa.</p>
+                        
+                        <p>Siempre fui alguien que huyó de los miedos y de las responsabilidades, y aunque sigo con miedo, creo que por primera vez en mi vida no quiero huir de algo. Si el destino decide cosas, no importa, porque estar a tu lado hace que todo valga completamente la pena.</p>
+                        
+                        <p class="letter-signature">Tu enamorado. ❤️</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

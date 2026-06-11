@@ -1,0 +1,176 @@
+:root {
+    --bg-color: #080808;
+    --primary-purple: #8a2be2;
+    --secondary-pink: #ff69b4;
+    --accent-green: #39ff14;
+    --text-light: #fdfdfd;
+    --glass-bg: rgba(138, 43, 226, 0.08);
+}
+
+body {
+    margin: 0;
+    padding: 20px 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #1a0a2e 0%, var(--bg-color) 70%);
+    color: var(--text-light);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    padding: 40px 30px;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 105, 180, 0.2);
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.3), inset 0 0 15px rgba(255, 105, 180, 0.1);
+    max-width: 750px; /* Un poco más ancho para dar espacio a versos largos */
+    width: 90%;
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, var(--primary-purple), var(--secondary-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 8px rgba(255, 105, 180, 0.7));
+}
+
+h2 {
+    color: var(--secondary-pink);
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    font-family: 'Dancing Script', cursive;
+    filter: drop-shadow(0 0 5px var(--secondary-pink));
+}
+
+.section-subtitle {
+    font-size: 0.95rem;
+    font-style: italic;
+    opacity: 0.7;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* LOGIN SCREEN */
+input {
+    padding: 15px;
+    width: 85%;
+    border: 2px solid var(--primary-purple);
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    margin: 25px 0;
+    font-size: 1.1rem;
+    text-align: center;
+    outline: none;
+    color: var(--accent-green);
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+input:focus { border-color: var(--accent-green); box-shadow: 0 0 15px rgba(57, 255, 20, 0.6); }
+
+button {
+    background: linear-gradient(45deg, var(--primary-purple), var(--secondary-pink));
+    color: #000;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s all ease;
+}
+button:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(57, 255, 20, 0.7); }
+
+#error-msg { display: none; color: #ff4757; margin-top: 15px; animation: shake 0.5s; }
+#main-content { display: none; animation: fadeInBackground 1s ease-out; }
+.divider { height: 2px; width: 60px; background: var(--accent-green); margin: 20px auto; box-shadow: 0 0 10px var(--accent-green); }
+
+/* MENU PESTAÑAS */
+.tabs-menu { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.tab-btn { background: rgba(0, 0, 0, 0.5); color: white; padding: 8px 18px; font-size: 0.9rem; border: 1px solid var(--primary-purple); }
+.tab-btn.active { background: linear-gradient(45deg, var(--primary-purple), var(--secondary-pink)); color: black; box-shadow: 0 0 12px var(--secondary-pink); border: none; }
+.tab-content { display: none; animation: scaleIn 0.5s; margin-top: 25px; }
+
+/* ============================================= */
+/* --- NUEVA SECCIÓN POEMAS (DISEÑO AMPLIO) ---  */
+/* ============================================= */
+
+/* Contenedor en lista vertical (uno abajo del otro con buen espacio) */
+.poem-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+    max-height: 500px; /* Añade scroll interno si son demasiados poemas */
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Tarjeta grande y cómoda */
+.poem-card-large {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 35px 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(138, 43, 226, 0.4);
+    text-align: center; /* Centra el poema de forma clásica y romántica */
+    transition: 0.3s all ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.poem-card-large:hover {
+    border-color: var(--secondary-pink);
+    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Título interno del poema */
+.poem-title {
+    font-family: 'Dancing Script', cursive;
+    color: var(--accent-green); /* Título verde neón para que resalte */
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 3px rgba(57, 255, 20, 0.4));
+}
+
+/* Estilo para las estrofas individuales */
+.stanza {
+    font-size: 1.05rem;
+    line-height: 1.8; /* Espaciado perfecto para leer líneas largas */
+    margin-bottom: 25px; /* Separación marcada entre estrofas */
+    color: #f0f0f0;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* Evita que la última estrofa tenga margen abajo innecesario */
+.stanza:last-child {
+    margin-bottom: 0;
+}
+/* ============================================= */
+
+/* OTRAS SECCIONES */
+.text-box { background: rgba(0, 0, 0, 0.3); padding: 20px; border-radius: 15px; border-left: 4px solid var(--accent-green); text-align: left; max-height: 350px; overflow-y: auto; }
+.love-letter p { line-height: 1.8; margin-bottom: 15px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; margin-top: 20px; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; border: 2px solid var(--primary-purple); transition: transform 0.3s; }
+.gallery-item img:hover { transform: scale(1.05); border-color: var(--accent-green); }
+.music-btn { display: inline-block; background: #FF0000; color: white; text-decoration: none; padding: 10px 25px; border-radius: 25px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
+.music-btn:hover { box-shadow: 0 0 18px rgba(255, 0, 0, 0.8); }
+.final-heart { font-size: 1.6rem; animation: pulse 2s infinite; }
+
+/* ANIMACIONES */
+@keyframes fadeInBackground { from { opacity: 0; } to { opacity: 1; } }
+@keyframes scaleIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
+@keyframes pulse { 0% { transform: scale(1); filter: drop-shadow(0 0 2px var(--secondary-pink)); } 50% { transform: scale(1.1); filter: drop-shadow(0 0 8px var(--secondary-pink)); } 100% { transform: scale(1); filter: drop-shadow(0 0 2px var(--secondary-pink)); } }
