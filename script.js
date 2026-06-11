@@ -6,7 +6,7 @@ function checkPassword() {
     const errorMsg = document.getElementById('error-msg');
     
     // Contraseñas válidas
-    if (pass === '27-03-26' || pass === '270326' || pass === 'Babosa') {
+    if (pass === '27-03-26' || pass === '270326' || pass === 'Brujary') {
         loginScreen.style.display = 'none';
         mainContent.style.display = 'block';
     } else {
